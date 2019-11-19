@@ -24,6 +24,11 @@ average(1, 3, 6, 6) // 4
 
 const average = (...args) => args.forEach((a, b, c) => a + b + c) / args.length;
 
+function calculate(array) {
+    return array.reduce( (a,b) => a + b) / array.length;
+}
+console.log(calculate([1, 3, 6, 6]));
+
 console.log(average(1))
 console.log(average(1, 3));
 console.log(multiply(1, 3, 6, 6))
