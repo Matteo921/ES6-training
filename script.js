@@ -44,6 +44,6 @@ console.log(average(...grades));
 
 //zadanie 5.
 //Podczas pracy nad projektem natknąłeś się na bardzo dziwną strukturę danych - [1, 4, 'Iwona', false, 'Nowak']. Twoim zadaniem jest skorzystanie z destrukturyzacji w celu wyciągnięcia z tablicy zmiennych firstname oraz lastname.
-const name = [1,4, 'Iwona', false, 'Nowak'];
-const [fristName, , lastName] = name;
+const names = [1,4, 'Iwona', false, 'Nowak'];
+const [fristName,second , ...lastName] = names;
 console.log(`${fristName} ${lastName}`);
