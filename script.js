@@ -19,14 +19,17 @@ function helloWorld() {
 // zadanie 3.
 //Napisz funkcję average, która obliczy średnią arytmetyczną wszystkich argumentów, które zostaną do niej przekazane. Załóż, że argumenty zawsze będą liczbami:
 //average(1) // 1
-average(1, 3) // 2
-average(1, 3, 6, 6) // 4
 
-const average = (...args) => args.forEach((a, b, c) => a + b + c) / args.length;
 
+const average(1, 3) // 2
+const average(1, 3, 6, 6) // 4
 function calculate(array) {
     return array.reduce( (a,b) => a + b) / array.length;
 }
+
+const average = (...args) => args.forEach((a, b, c) => a + b + c) / args.length;
+
+
 console.log(calculate([1, 3, 6, 6]));
 
 console.log(average(1))
@@ -42,5 +45,5 @@ console.log(average(...grades));
 //zadanie 5.
 //Podczas pracy nad projektem natknąłeś się na bardzo dziwną strukturę danych - [1, 4, 'Iwona', false, 'Nowak']. Twoim zadaniem jest skorzystanie z destrukturyzacji w celu wyciągnięcia z tablicy zmiennych firstname oraz lastname.
 const name = [1,4, 'Iwona', false, 'Nowak'];
-const [ ,, fristName, , lastName] = names;
+const [fristName, , lastName] = name;
 console.log(`${fristName} ${lastName}`);
